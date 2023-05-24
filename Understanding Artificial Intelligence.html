@@ -3,6 +3,7 @@
 	Forty by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+A new Landing page has to be created for each option
 -->
 <html>
 
@@ -22,7 +23,8 @@
 	<div id="wrapper">
 
 		<!-- Header -->
-		<header id="header" class="alt">
+		<!-- Note: The "styleN" class below should match that of the banner element. -->
+		<header id="header" class="alt style2">
 			<a href="index.html" class="logo"><span>Ahmed Qura</span></a>
 			<nav>
 				<a href="#menu">Menu</a>
@@ -45,13 +47,17 @@
 		</nav>
 
 		<!-- Banner -->
-		<section id="banner" class="major">
+		<!-- Note: The "styleN" class below should match that of the header element. -->
+		<section id="banner" class="style2">
 			<div class="inner">
+				<span class="image">
+					<img src="images/pic07.jpg" alt="" />
+				</span>
 				<header class="major">
-					<h1>Ahmed Qura, MSc E-Portfolio</h1>
+					<h1>Understanding Artificial Intelligence</h1>
 				</header>
 				<div class="content">
-					<p>My e-portfolio based on the work carried out on the MSc Artificial Intelligence programme.</p>
+					<p>An introduction to the world of Artificial Intelligence and Machine Learning.</p>
 				</div>
 			</div>
 		</section>
@@ -60,86 +66,95 @@
 		<div id="main">
 
 			<!-- One -->
-			<section id="two">
+			<section id="one">
 				<div class="inner">
 					<header class="major">
-						<h2>About Me</h2>
+						<h2>Learning Outcomes</h2>
 					</header>
-					<p> My name is Ahmed Ismail Qura, an Egyptian Who Holds a Bachelor's Degree in Engineering, I have a
-						passion for Machine learning and Industry 4.0,
-						this E-Portfolio will reflect the Knowledge and Experience I gain in my Masters </p>
-					<ul class="actions">
-						<li><a href="About.html" class="button">Learn more</a></li>
+					<p>During this course I learnt:</p>
+					<ul>
+						<li>Developing an understanding of the history and future of Artificial Intelligence.</li>
+						<li>Developing an understanding of AI fundamentals including the Alan Turing Test.</li>
+						<li>Examining different learning algorithms usnig WEKA tool.</li>
+						<li>Introduced to several machine learning algorithms and their use cases.</li>
+						<li>Introduced to Feature Engineering and how to implement it in EDA.</li>
+						<li>Examining different learning algorithms usnig WEKA tool.</li>
+						<li>Developing programming abilities for learning algorithm implementation using Python.</li>
+
 					</ul>
 				</div>
 			</section>
 
 			<!-- Two -->
-
-			<section id="one" class="tiles">
-				<article>
-					<span class="image">
-						<img src="images/pic01.jpg" alt="" />
-					</span>
-					<header class="major">
-						<h3><a href="Understanding Artificial Intelligence.html" class="link">Understanding Artificial
-								Intelligence</a></h3>
-						<p>This module covers the concepts and principles in the field of AI, the governance and ethical frameworks
-							and competencies required as an AI professional</p>
-					</header>
-				</article>
-				<article>
-					<span class="image">
-						<img src="images/pic02.jpg" alt="" />
-					</span>
-					<header class="major">
-						<h3><a href="Module 2.html" class="link">Numerical Analysis</a></h3>
-						<p>This module introduces key aspects of mathematics and statistics for data science and
-							artificial intelligence</p>
-					</header>
-				</article>
-				<article>
-					<!-- <span class="image">
-									<img src="images/pic03.jpg" alt="" />
-								</span>
-								<header class="major">
-									<h3><a href="Module 3.html" class="link">Object-Oriented Information Systems</a></h3>
-								</header>
-							</article>
-							<article>
-								<span class="image">
-									<img src="images/pic04.jpg" alt="" />
-								</span>
-								<header class="major">
-									<h3><a href="Module 4.html" class="link">Network and Information Security Management</a></h3>
-								</header>
-							</article>
-							<article>
-								<span class="image">
-									<img src="images/pic05.jpg" alt="" />
-								</span>
-								<header class="major">
-									<h3><a href="Module 5.html" class="link">Software Engineering PM</a></h3>
-								</header>
-							</article>
-							<article>
-								<span class="image">
-									<img src="images/pic05.jpg" alt="" />
-								</span>
-								<header class="major">
-									<h3><a href="Module 6.html" class="link">Research Methods and Professional Practice</a></h3>
-								</header>
-							</article>
-							<article> -->
-					<span class="image">
-						<img src="images/pic06.jpg" alt="" />
-					</span>
-					<header class="major">
-						<h3><a href="Project.html" class="link">Projects</a></h3>
-						<p>All my projects that have been done for now</p>
-					</header>
-				</article>
+			<section id="two" class="spotlights">
+				<section>
+					<a href="generic.html" class="image">
+						<img src="images/fraud.jpg" alt="Fraud" data-position="center center" />
+					</a>
+					<div class="content">
+						<div class="inner">
+							<header class="major">
+								<h3>Artefact</h3>
+							</header>
+							<p>AAt the end of the module I had to submit a report highlighting one of the machine
+								learning algorithms and one use case of it in real life, The use of machine learning
+								algorithms in Credit Card Fraud Detection (CCFD), was the implementation I have chosen
+								to study, using <b>WEKA</b> tool to analyze the data,
+								preprocess it and train the model I have submitted the
+								final Artefact that you can find it <a href="UAI_Artefact.html">Here</a> .</p>
+							<ul class="actions">
+								<li><a href="UAI_Artefact.html" class="button">Learn more</a></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<!-- <section>
+									<a href="generic.html" class="image">
+										<img src="images/pic09.jpg" alt="" data-position="top center" />
+									</a>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3>Reflections</h3>
+											</header>
+											<p>What exactly have I learnt and how?</p>
+											<ul class="actions">
+												<li><a href="generic.html" class="button">More Information here</a></li>
+											</ul>
+										</div>
+									</div>
+								</section> -->
+				<!-- <section>
+									<a href="generic.html" class="image">
+										<img src="images/pic10.jpg" alt="" data-position="25% 25%" />
+									</a>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3>Meeting Notes</h3>
+											</header>
+											<p>Notes from various meetings, as well as feedback from team members and tutors.</p>
+											<ul class="actions">
+												<li><a href="generic.html" class="button">For specific cases, see here</a></li>
+											</ul>
+										</div>
+									</div>
+								</section> -->
 			</section>
+
+			<!-- Three -->
+			<!-- <section id="three">
+				<div class="inner">
+					<header class="major">
+						<h2>Professional Skills Matrix and Action Plan</h2>
+					</header>
+					<p>What skills have I gained or enhanced as a result of this module and how can I use it? What else
+						do I need to learn?</p>
+					<ul class="actions">
+						<li><a href="generic.html" class="button next">Learn More</a></li>
+					</ul>
+				</div>
+			</section> -->
 
 		</div>
 
