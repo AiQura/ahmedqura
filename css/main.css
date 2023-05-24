@@ -2160,6 +2160,17 @@ input, select, textarea {
 
 /* Image */
 
+	.imageTaqa {
+		border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%;
+
+
+	}
+
 	.image {
 		border: 0;
 		display: inline-block;
@@ -2194,6 +2205,7 @@ input, select, textarea {
 			display: block;
 			margin: 0 0 2em 0;
 			width: 100%;
+			
 		}
 
 			.image.fit img {
