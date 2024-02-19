@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	This is an example of a sub page for each module.  It has to be replicated in each module, containing the requested contents -  artefacts, notes, reflections etc
+	Ensure you give a different title to each replica and link it to the main module page accordingly.
+-->
+<html>
+
+<head>
+	<title>K-means</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<a href="index.html" class="logo"><span>Ahmed Qura</span></a>
+			<nav>
+				<a href="#menu">Menu</a>
+			</nav>
+		</header>
+
+		<!-- Menu -->
+		<nav id="menu">
+			<ul class="links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="About.html">About Me</a></li>
+				<li><a href="Understanding_Artificial_Intelligence.html">Understanding Artificial Intelligence</a></li>
+				<li><a href="Numerical_Analysis.html">Numerical Analysis</a></li>
+				<li><a href="machine_learning.html">Machine Learning</a></li>
+				<!--
+				 <li><a href="Module 3.html">Object-Oriented Information Systems</a></li>
+				<li><a href="Module 4.html">Network and Information Security Management</a></li>
+				<li><a href="Module 5.html">Software Engineering PM</a></li>
+				<li><a href="Module 6.html">Research Methods and Professional Practice</a></li> 
+				<li><a href="Project.html">Project</a></li> -->
+				<ul>
+		</nav>
+
+		<!-- Main -->
+		<div id="main" class="alt">
+
+			<!-- One -->
+			<section id="one">
+				<div class="inner">
+					<header class="major">
+						<h1>K-means & jaccard</h1>
+					</header>
+					<div style="max-width: 100%; overflow: hidden;">
+						<div style="position: relative; padding-bottom: 30.04%;">
+							<img src="images/jac.png" alt=""
+								style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+						</div>
+					</div>
+					<P></P>
+					<p>the following table have some data and jaccard ned to be calculated for the following
+					<ol>
+						(Jack, Mary)
+					</ol>
+					<ol>(Jack, Jim)</ol>
+					<ol>(Jim, Mary)
+					</ol>
+
+					</p>
+					<div class="code-container">
+
+						<body class="code-body">
+							<div class="code-container">
+								<pre>
+				<code>
+import pandas as pd
+from scipy.spatial.distance import jaccard
+
+# Create the data
+data = {
+    'Name': ['Jack', 'Mary', 'Jim'],
+    'Gender': ['M', 'F', 'M'],
+    'Fever': ['Y', 'Y', 'Y'],
+    'Cough': ['N', 'N', 'P'],
+    'Test-1': ['P', 'P', 'N'],
+    'Test-2': ['N', 'A', 'N'],
+    'Test-3': ['N', 'P', 'N'],
+    'Test-4': ['A', 'N', 'A']
+}
+
+# Create the DataFrame
+df = pd.DataFrame(data)
+
+# Select the relevant columns and convert them to numeric (0 for negative, 1 for positive)
+df_binary = df[['Fever', 'Cough', 'Test-1', 'Test-2', 'Test-3', 'Test-4']].replace({'N': 0, 'P': 1, 'Y': 1, 'A': 0})
+
+# Calculate the Jaccard coefficient for each pair of names
+jaccard_matrix = pd.DataFrame(columns=df['Name'], index=df['Name'])
+for i in range(len(df)):
+    for j in range(i + 1, len(df)):
+        jaccard_matrix.iloc[i, j] = jaccard(df_binary.iloc[i, 1:], df_binary.iloc[j, 1:])
+        jaccard_matrix.iloc[j, i] = jaccard_matrix.iloc[i, j]  # Fill the other half of the matrix
+
+# Print the Jaccard coefficient matrix
+print(jaccard_matrix)
+</code>
+			</pre>
+							</div>
+						</body>
+
+					</div>
+					<p>the output is
+				
+					</p>
+					<img src="images/mat.png"
+						style="position: center; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+
+					<p></p>
+				</div>
+			</section>
+
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<ul class="icons">
+					<li><a href="https://github.com/Ahmedqura" target="_blank" class="icon brands alt fa-github"><span
+								class="label">GitHub</span></a></li>
+					<li><a href="https://www.linkedin.com/in/ahmed-ismail-cmrp-smrpco-3617a287/"
+							class="icon brands alt fa-linkedin-in" target="_blank"><span
+								class="label">LinkedIn</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Ahmed Qura</li>
+					<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</footer>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.scrolly.min.js"></script>
+	<script src="js/jquery.scrollex.min.js"></script>
+	<script src="js/browser.min.js"></script>
+	<script src="js/breakpoints.min.js"></script>
+	<script src="js/util.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>

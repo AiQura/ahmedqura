@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	This is an example of a sub page for each module.  It has to be replicated in each module, containing the requested contents -  artefacts, notes, reflections etc
+	Ensure you give a different title to each replica and link it to the main module page accordingly.
+-->
+<html>
+
+<head>
+	<title>Auto-mpg dataset</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<a href="index.html" class="logo"><span>Ahmed Qura</span></a>
+			<nav>
+				<a href="#menu">Menu</a>
+			</nav>
+		</header>
+
+		<!-- Menu -->
+		<nav id="menu">
+			<ul class="links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="About.html">About Me</a></li>
+				<li><a href="Understanding_Artificial_Intelligence.html">Understanding Artificial Intelligence</a></li>
+				<li><a href="Numerical_Analysis.html">Numerical Analysis</a></li>
+				<li><a href="machine_learning.html">Machine Learning</a></li>
+				<!--
+				 <li><a href="Module 3.html">Object-Oriented Information Systems</a></li>
+				<li><a href="Module 4.html">Network and Information Security Management</a></li>
+				<li><a href="Module 5.html">Software Engineering PM</a></li>
+				<li><a href="Module 6.html">Research Methods and Professional Practice</a></li> 
+				<li><a href="Project.html">Project</a></li> -->
+				<ul>
+		</nav>
+
+		<!-- Main -->
+		<div id="main" class="alt">
+
+			<!-- One -->
+			<section id="one">
+				<div class="inner">
+					<header class="major">
+						<h1>Auto-mpg dataset</h1>
+					</header>
+					<div style="max-width: 100%; overflow: hidden;">
+						<div style="position: relative; padding-bottom: 30.04%;">
+							<img src="images/auto.jpeg" alt=""
+								style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+						</div>
+					</div>
+					<P></P>
+					<p>The first step in learning machine learning is to perform EDA for the data you have and
+						preprocess it, during the unit 2 seminar, the main concentration was to know how to preprocess
+						the data so it will be ready for the model to be trained to, this preprocessing included
+						investigating the data the Skewness, the Heat Map, and correlations, a tutorial for house prices
+						was given along with EDA for it, then we had to perform the same analysis to Auto-mpg dataset,
+						the EDA aims are many among them are identifying the missing values and replace categorical data
+						with numerical data.</p>
+					<div class="code-container">
+
+						<body class="code-body">
+							<div class="code-container">
+								<pre>
+				<code>
+train.skew(), train.kurt()
+y = train['SalePrice']
+plt.figure(1); plt.title('Johnson SU')
+sns.distplot(y, kde=False, fit=st.johnsonsu)
+plt.figure(2); plt.title('Normal')
+sns.distplot(y, kde=False, fit=st.norm)
+plt.figure(3); plt.title('Log Normal')
+sns.distplot(y, kde=False, fit=st.lognorm)
+				</code>
+			</pre>
+							</div>
+						</body>
+					</div>
+					<p>the upper code shows how to estimate the Skewness of data </p>
+					<p></p>
+				</div>
+			</section>
+
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<ul class="icons">
+					<li><a href="https://github.com/Ahmedqura" target="_blank" class="icon brands alt fa-github"><span
+								class="label">GitHub</span></a></li>
+					<li><a href="https://www.linkedin.com/in/ahmed-ismail-cmrp-smrpco-3617a287/"
+							class="icon brands alt fa-linkedin-in" target="_blank"><span
+								class="label">LinkedIn</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Ahmed Qura</li>
+					<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</footer>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.scrolly.min.js"></script>
+	<script src="js/jquery.scrollex.min.js"></script>
+	<script src="js/browser.min.js"></script>
+	<script src="js/breakpoints.min.js"></script>
+	<script src="js/util.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -4087,3 +4087,26 @@ body.is-menu-visible #menu .inner {
 	opacity: 1;
 	visibility: visible;
 }
+.body-code {
+	font-family: 'Courier New', monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #242943;
+
+}
+
+.code-container {
+	max-width: auto;
+    width: 100%;
+    overflow-x: auto;
+    background-color: #242943;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 0; /* Reset margin */
+	overflow: hidden; /* Hide any overflowing content */
+    text-align: left; /* Align text to the left */
+}
