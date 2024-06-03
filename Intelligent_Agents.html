@@ -68,6 +68,19 @@ A new Landing page has to be created for each option
 		<!-- Main -->
 		<div id="main">
 
+			<section id="one">
+				<div class="inner">
+					<header class="major">
+						<h2>Agent Notebook</h2>
+					</header>
+					<ul class="actions">
+						<li><a href="agent.pdf" class="button" target="_blank ">Open Agent
+								Notebook</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+
 			<!-- One -->
 			<section id="one">
 				<div class="inner">
@@ -348,7 +361,7 @@ A new Landing page has to be created for each option
 								<h3>Creating Parse Trees</h3>
 							</header>
 							<p>Constituency-Based Parse Trees</p>
-								<h4></h4>1. The government raised interest rates.</h4>
+							<h4></h4>1. The government raised interest rates.</h4>
 
 							<pre>
 									S
@@ -432,6 +445,60 @@ A new Landing page has to be created for each option
 				</section>
 
 				<!-- Unit 5 wiki -->
+
+				<section>
+
+					<div class="content">
+						<div class="inner">
+							<header class="major">
+								<h3>Create an agent dialogue, using KQML and KIF</h3>
+							</header>
+							<p>
+								Alice (Procurement Agent) initiates the conversation:
+
+								(KQML (performative tell)</p>
+							(sender Alice)</p>
+							(receiver Bob)</p>
+							(content
+							(KIF (forall ?x
+							(=> (and (isa ?x Television)
+							(size ?x 50inch))
+							(ask (stock-level ?x))))))</p>
+
+							Bob (Warehouse Agent) responds to the stock level query:</p>
+
+							(KQML (performative tell)</p>
+							(sender Bob)</p>
+							(receiver Alice)</p>
+							(content
+							(KIF (number (stock-level (Television 50inch)) 30))))</p>
+
+							Alice now queries the number of HDMI slots in the televisions:</p>
+
+							(KQML (performative ask-if)</p>
+							(sender Alice)</p>
+							(receiver Bob)</p>
+							(content
+							(KIF (number-of (HDMI-slots (Television 50inch)) ?n))))</p>
+
+							Bob responds with the number of HDMI slots:</p>
+
+							(KQML (performative tell)</p>
+							(sender Bob)</p>
+							(receiver Alice)</p>
+							(content
+							(KIF (number (HDMI-slots (Television 50inch)) 3))))</p>
+
+							</p>
+							<ul class="actions">
+								<li><a href="Agent_dialoug.pdf" class="button" target="_blank ">Open Agent_dialoug
+										file</a>
+								</li>
+							</ul>
+
+						</div>
+					</div>
+				</section>
 
 
 
